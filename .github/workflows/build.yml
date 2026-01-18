@@ -92,6 +92,9 @@ jobs:
           autotools:p
           libusb:p
           libftdi:p
+    - uses: actions/checkout@v6
+      with:
+        submodules: true
     - name: build
       run: |
         export LDFLAGS="-s -Wl,-no-undefined -Wl,-O1 -static"
