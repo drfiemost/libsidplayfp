@@ -90,6 +90,7 @@ jobs:
         pacboy: >-
           toolchain:p
           autotools:p
+          xa:p
           libusb:p
           libftdi:p
     - uses: actions/checkout@v6
