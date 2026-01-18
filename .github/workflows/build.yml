@@ -99,7 +99,7 @@ jobs:
     - name: build
       run: |
         export LDFLAGS="-s -Wl,-no-undefined -Wl,-O1 -static"
-        export CXXFLAGS="-O2 -march=x86-64 -fomit-frame-pointer -pipe -DUNICODE"
+        export CXXFLAGS="-O2 -march=x86-64 -fomit-frame-pointer -pipe -DUNICODE -D_UNICODE"
         export PKG_CONFIG="pkg-config --static"
         autoreconf -vfi
         ./configure --disable-shared --enable-static --without-gcrypt --enable-hardsid --with-usbsid --with-exsid --with-simd=runtime
